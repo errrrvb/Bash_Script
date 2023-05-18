@@ -1,8 +1,17 @@
 #!/bin/bash
 
 # Перейти в директорию с файлами
-cd /home/roma/files
 
+if [[ ! -n $1 ]];
+then
+    echo "Не был выбран файл"
+    exit 1
+else
+    if [[ ! $1 == *.txt && -f $1 ]];
+    then
+        exit 1
+    fi
+fi
 # Вывести меню с возможными операциями
 echo "Выберите операцию:"
 echo "1. Добавить данные в файл"
@@ -30,11 +39,17 @@ case $choice in
     3)  # Удалить файл
         echo "Вы уверены, что хотите удалить файл? (y/n)"
         read confirmation
-        if [ "$confirmation" = "y" ]; then
+        if [ "$confirmation" = "y" ]; 
+        then
             rm $1
-            echo "Файл удален"
+            if [ $? -eq 0 ]; 
+            then
+                echo "Удаление файла успешно выполнено"
+            else
+                echo "Ошибка при удалении файла"
+            fi
         else
-            echo "Удаление отменено"
+            echo "Удаление файла отменено"   
         fi
         ;;
     4)  # Прочитать содержимое файла
