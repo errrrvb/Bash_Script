@@ -18,6 +18,8 @@ expected_output="Удаление файла успешно выполнено"
 
 if [[ "$output" == *"$expected_output"* ]]; then
     echo "Тест 6 пройден"
+    exit 0
 else
     echo "Тест 6 не пройден"
+    exit 1
 fi

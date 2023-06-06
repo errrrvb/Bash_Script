@@ -17,6 +17,8 @@ expected_output="1"
 
 if [[ "$output" == *"$expected_output"* ]]; then
     echo "Тест 5 пройден"
+    exit 0
 else
     echo "Тест 5 не пройден"
+    exit 1
 fi

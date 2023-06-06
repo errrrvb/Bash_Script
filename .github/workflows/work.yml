@@ -10,9 +10,31 @@ jobs:
       run: |
         chmod +x operation_test.sh
         ./operation_test.sh
-    - name:
+    - name: Тест на неправильное расширение файла
+      run: |
+        chmod +x filetype_test.sh
+        ./filetype_test.sh
+    - name: Тест на добавление данных в файл 
       run: |
         sudo apt update
         sudo apt install expect
         chmod +x textadd_test.sh
         ./textadd_test.sh
+    - name: Тест на изменение данных в файле
+      run: |
+        sudo apt update
+        sudo apt install expect
+        chmod +x textchange_test.sh
+        ./textchange_test.sh
+    - name: Тест на чтение данных в файле
+      run: |
+        sudo apt update
+        sudo apt install expect
+        chmod +x textread_test.sh
+        ./textread_test.sh
+    - name: Тест на удаление файла
+      run: |
+        sudo apt update
+        sudo apt install expect
+        chmod +x textdelete_test.sh
+        ./textdelete_test.sh
