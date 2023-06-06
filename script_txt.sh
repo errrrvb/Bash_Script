@@ -9,6 +9,7 @@ then
 else
     if [[ ! $1 == *.txt && -f $1 ]];
     then
+        echo "Неверный тип файла"
         exit 1
     fi
 fi
