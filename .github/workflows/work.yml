@@ -10,3 +10,7 @@ jobs:
       run: |
         chmod +x operation_test.sh
         ./operation_test.sh
+    - name:
+      run: |
+        chmod +x textadd_test.sh
+        ./textadd_test.sh

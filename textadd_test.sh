@@ -19,9 +19,12 @@ if [[ "$output" == *"$expected_output"* ]]; then
     file_contents=$(cat test.txt)
     if [[ "$file_contents" == "Тестовые данные"$'\n'"test data" ]]; then
         echo "Тест 3 пройден"
+        exit 0
     else
         echo "Тест 3 не пройден"
+        exit 1
     fi
 else
     echo "Тест 3 не пройден"
+    exit 1
 fi
