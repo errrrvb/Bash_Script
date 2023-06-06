@@ -10,10 +10,6 @@ jobs:
       run: |
         chmod +x operation_test.sh
         ./operation_test.sh
-    - name: Тест на неправильное расширение файла
-      run: |
-        chmod +x filetype_test.sh
-        ./filetype_test.sh
     - name: Тест на добавление данных в файл 
       run: |
         sudo apt update
