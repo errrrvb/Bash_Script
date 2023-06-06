@@ -6,19 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Тест создания файла
+    - name: Тест на определение типа файла
       run: |
-        chmod +x test_creation.sh
-        ./test_creation.sh
-    - name: Тест удаления файла
-      run: |
-        chmod +x test_removal.sh
-        ./test_removal.sh
-    - name: Тест чтения в скрипте и вывода скрипта
-      run: |
-        chmod +x test_script.sh
-        ./test_script.sh
-    - name: Тест сумматора
-      run: |
-        chmod +x test_summator.sh
-        ./test_summator.sh
+        chmod +x filetype_test.sh
+        ./filetype_test.sh
