@@ -34,3 +34,7 @@ jobs:
         sudo apt install expect
         chmod +x textdelete_test.sh
         ./textdelete_test.sh
+    - name: Тест на тип файла
+      run: |
+        chmod +x filetype_test.sh
+        ./filetype_test.sh
