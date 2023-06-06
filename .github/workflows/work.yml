@@ -12,5 +12,7 @@ jobs:
         ./operation_test.sh
     - name:
       run: |
+        sudo apt update
+        sudo apt install expect
         chmod +x textadd_test.sh
         ./textadd_test.sh
