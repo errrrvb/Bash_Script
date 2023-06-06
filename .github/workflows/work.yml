@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Тест на определение типа файла
+    - name: Тест на выбор файла
       run: |
-        chmod +x filetype_test.sh
-        ./filetype_test.sh
+        chmod +x operation_test.sh
+        ./operation_test.sh
